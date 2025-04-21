@@ -131,6 +131,10 @@ impl Display for Url<'_> {
 				let charset_index = defaults_get("charset")
 					.and_then(|value| value.as_int())
 					.unwrap_or(1);
+				if charset_index == 3{
+					write!(f, "https://cn.webmota.com")
+				}
+				else{ 
 				let charset = match charset_index {
 					// ! Cloudflare issue
 					// 0 => "cn",
@@ -140,6 +144,7 @@ impl Display for Url<'_> {
 				};
 
 				write!(f, "https://{}.baozimh.com", charset)
+				}
 			}
 
 			Self::Filters(query) => {
