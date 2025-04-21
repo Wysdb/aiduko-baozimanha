@@ -6,7 +6,7 @@
 				"type": "segment",
 				"key": "charset",
 				"title": "繁簡轉換",
-				"values": ["简体", "預設", "繁體"],
+				"values": ["简体", "預設", "繁體", "最新"],
 				"default": "預設"
 			}
 		]
